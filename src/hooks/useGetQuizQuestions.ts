@@ -5,7 +5,7 @@ import { setQuizQuestions, setTotalQuestionsCount, resetState } from "../feature
 import { sanitizeAndNormalizeData } from "../helpers";
 import { QuizDataResponse } from "../types/quizData";
 
-const QUIZ_DATA_URL = "https://opentdb.com/api.php?amount=20&difficulty=easy&type=boolean";
+const QUIZ_DATA_URL = "https://opentdb.com/api.php?amount=10&difficulty=easy&type=boolean";
 
 export const useGetQuizData = () => {
 	const dispatch = useDispatch();

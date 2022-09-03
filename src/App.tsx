@@ -9,7 +9,7 @@ import Results from "./components/Results";
 function App() {
 	return (
 		<div className="App">
-			<Center sx={{ width: "100%", height: "100vh", backgroundColor: "#F8F9FA" }}>
+			<Center sx={{ width: "100%", height: "100vh", backgroundColor: "#181D2A" }}>
 				<Routes>
 					<Route path="/" element={<Layout />}>
 						<Route index element={<Start />} />
