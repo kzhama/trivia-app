@@ -4,14 +4,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Clone the project
 
-`git clone https://github.com/kzhama/trivia-app.git`
+    git clone https://github.com/kzhama/trivia-app.git
 
 ## Install all dependencies
 
-`npm i`
+    npm i
 
 ## Run the project
 
-`npm start`
+    npm start
 
 Runs the app in the development mode. In http://localhost:3000
