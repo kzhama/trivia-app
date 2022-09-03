@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+
 import triviaReducer from "../features/trivia/triviaSlice";
 
 export const store = configureStore({

@@ -3,16 +3,9 @@ import { Card, Container, Stack } from "@mantine/core";
 
 const Layout = () => {
 	return (
-		<Card shadow="sm" p="lg" radius="md" withBorder>
-			<Container size={300}>
-				<Stack
-					align="center"
-					justify="space-around"
-					spacing="xl"
-					sx={(theme) => ({
-						height: 600,
-					})}
-				>
+		<Card withBorder radius="lg" p="xs" sx={() => ({ minWidth: 380, maxWidth: 380 })}>
+			<Container size={358} p="xs">
+				<Stack align="center" justify="space-around" spacing="xl" sx={() => ({ height: 700, overflow: "auto" })}>
 					<Outlet />
 				</Stack>
 			</Container>

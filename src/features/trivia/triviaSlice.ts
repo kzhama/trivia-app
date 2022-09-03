@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
+
 import { AnsweredQuestion, NormalizedQuizQuestionData } from "../../types/quizData";
 
 export interface TriviaState {
@@ -32,10 +33,16 @@ export const triviaSlice = createSlice({
 		addAnsweredQuestion: (state, action: PayloadAction<AnsweredQuestion>) => {
 			state.answeredQuestions.push(action.payload);
 		},
+		resetState: () => initialState,
 	},
 });
 
-export const { setQuizQuestions, setTotalQuestionsCount, incrementCorrectAnswersCount, addAnsweredQuestion } =
-	triviaSlice.actions;
+export const {
+	setQuizQuestions,
+	setTotalQuestionsCount,
+	incrementCorrectAnswersCount,
+	addAnsweredQuestion,
+	resetState,
+} = triviaSlice.actions;
 
 export default triviaSlice.reducer;
