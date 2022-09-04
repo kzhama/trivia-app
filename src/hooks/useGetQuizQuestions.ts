@@ -7,7 +7,7 @@ import { QuizDataResponse } from "../types/quizData";
 
 const QUIZ_DATA_URL = "https://opentdb.com/api.php?amount=10&difficulty=easy&type=boolean";
 
-export const useGetQuizData = () => {
+const useGetQuizData = () => {
 	const dispatch = useDispatch();
 
 	const [isLoading, setIsLoading] = useState(false);
@@ -47,3 +47,5 @@ export const useGetQuizData = () => {
 		error,
 	};
 };
+
+export default useGetQuizData;

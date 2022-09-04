@@ -12,9 +12,12 @@ const HUNDRED_PERCENT = 100;
 const Quiz = () => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	const { quizQuestions, totalQuestionsCount } = useSelector((state: RootState) => state.triviaReducer);
+	const { quizQuestions, totalQuestionsCount } = useSelector(
+		(state: RootState) => state.triviaReducer
+	);
 
 	const [currentQuestionStepNumber, setCurrentQuestionStepNumber] = useState(1);
+	const currentQuestion = quizQuestions[currentQuestionStepNumber - 1];
 
 	const handleOnClick = (userAnswer: boolean) => {
 		if (currentQuestionStepNumber === totalQuestionsCount) navigate("/results");
@@ -32,8 +35,8 @@ const Quiz = () => {
 		setCurrentQuestionStepNumber((prevQuestionNumber) => prevQuestionNumber + 1);
 	};
 
-	const currentQuestion = quizQuestions[currentQuestionStepNumber - 1];
-	const currentProgressInPercentage = (HUNDRED_PERCENT / totalQuestionsCount) * currentQuestionStepNumber;
+	const currentProgressInPercentage =
+		(HUNDRED_PERCENT / totalQuestionsCount) * currentQuestionStepNumber;
 
 	return (
 		<>
@@ -42,7 +45,7 @@ const Quiz = () => {
 			</Title>
 			<Container sx={{ height: 160 }} p="xs">
 				<Paper shadow="xl" radius="lg" p="lg" sx={{ minWidth: 288 }}>
-					<Text color={"dark"}>{currentQuestion.question}</Text>
+					<Text color="dark">{currentQuestion.question}</Text>
 				</Paper>
 			</Container>
 
@@ -59,10 +62,22 @@ const Quiz = () => {
 				}
 			/>
 			<Group sx={{ height: 60 }}>
-				<Button variant="outline" onClick={() => handleOnClick(false)} radius="md" size="md" color="red">
+				<Button
+					variant="outline"
+					onClick={() => handleOnClick(false)}
+					radius="md"
+					size="md"
+					color="red"
+				>
 					FALSE
 				</Button>
-				<Button variant="outline" onClick={() => handleOnClick(true)} radius="md" size="md" color="green">
+				<Button
+					variant="outline"
+					onClick={() => handleOnClick(true)}
+					radius="md"
+					size="md"
+					color="green"
+				>
 					TRUE
 				</Button>
 			</Group>

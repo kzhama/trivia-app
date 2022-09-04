@@ -6,7 +6,7 @@ import Start from "./components/Start";
 import Quiz from "./components/Quiz";
 import Results from "./components/Results";
 
-function App() {
+const App = () => {
 	return (
 		<div className="App">
 			<Center sx={{ width: "100%", height: "100vh", backgroundColor: "#181D2A" }}>
@@ -20,6 +20,6 @@ function App() {
 			</Center>
 		</div>
 	);
-}
+};
 
 export default App;

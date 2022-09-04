@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { Alert, Button, Text, Title } from "@mantine/core";
 import { IconAlertCircle } from "@tabler/icons";
 
-import { useGetQuizData } from "../hooks/useGetQuizQuestions";
-import { useSelector } from "react-redux";
+import useGetQuizData from "../hooks/useGetQuizQuestions";
 import { RootState } from "../store";
 
 const Start = () => {
@@ -11,12 +11,14 @@ const Start = () => {
 	const navigate = useNavigate();
 	const { totalQuestionsCount } = useSelector((state: RootState) => state.triviaReducer);
 
-	if (error)
+	if (error) {
 		return (
 			<Alert icon={<IconAlertCircle size={16} />} title="Bummer!" color="red">
-				Something went wrong! {error.message}
+				Something went wrong!
+				{error.message}
 			</Alert>
 		);
+	}
 
 	return (
 		<>
@@ -24,7 +26,9 @@ const Start = () => {
 				Welcome to the Trivia Challenge!
 			</Title>
 			<Text weight={500} size="lg" align="center">
-				You will be presented with {totalQuestionsCount || "..."} True or False questions.
+				You will be presented with
+				{totalQuestionsCount || "..."}
+				True or False questions.
 			</Text>
 			<Text weight={500} size="lg" align="center">
 				Can you score 100%?

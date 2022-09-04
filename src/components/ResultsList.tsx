@@ -16,13 +16,12 @@ const ResultsList: FC<ResultsListProps> = ({ answeredQuestions }) => {
 					<IconCheck size={16} />
 				</ThemeIcon>
 			);
-		} else {
-			return (
-				<ThemeIcon color="red" size={24} radius="xl">
-					<IconX size={16} color="white" />
-				</ThemeIcon>
-			);
 		}
+		return (
+			<ThemeIcon color="red" size={24} radius="xl">
+				<IconX size={16} color="white" />
+			</ThemeIcon>
+		);
 	};
 
 	return (
