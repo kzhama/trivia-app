@@ -4,6 +4,7 @@
         "es2021": true
     },
     "extends": [
+        "react-app",
         "airbnb",
         "airbnb-typescript",
         "plugin:react/recommended",
@@ -23,9 +24,7 @@
     "rules": {
         "react/react-in-jsx-scope": "off",
         "linebreak-style": ["error", "windows"],
-        "indent": [2, "tab", { "SwitchCase": 1, "VariableDeclarator": 1 }],
         "no-tabs": 0,
-        "react/prop-types": 0,
         "react/jsx-indent": [2, "tab"],
         "@typescript-eslint/indent":  [2, "tab"],
         "react/jsx-indent-props": [2, "tab"],
