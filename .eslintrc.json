@@ -1,52 +1,57 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "react-app",
-        "airbnb",
-        "airbnb-typescript",
-        "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
-    ],
-    "overrides": [
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "project": "./tsconfig.json"
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint"
-    ],
-    "rules": {
-        "react/react-in-jsx-scope": "off",
-        "linebreak-style": ["error", "windows"],
-        "no-tabs": 0,
-        "react/jsx-indent": [2, "tab"],
-        "@typescript-eslint/indent":  [2, "tab"],
-        "react/jsx-indent-props": [2, "tab"],
-        "quotes": "off",
-        "@typescript-eslint/quotes": "off",
-        "@typescript-eslint/comma-dangle": "off",
-        "react/function-component-definition": [2, {
-            "namedComponents": "arrow-function" }],
-        "import/prefer-default-export": "off",
-        "implicit-arrow-linebreak": "off",
-        "arrow-body-style": "off",
-        "object-curly-newline": ["error", {
-            "ImportDeclaration": "never"
-        }],
-        "operator-linebreak": "warn",
-        "react/jsx-wrap-multilines": "warn",
-        "react/no-array-index-key": "warn",
-        "no-param-reassign": ["error", {
-            "props": true,
-            "ignorePropertyModificationsFor": [
-              "state"
-            ]
-          }]
-    }
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"react-app",
+		"airbnb",
+		"airbnb-typescript",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"overrides": [],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"project": "./tsconfig.json"
+	},
+	"plugins": ["react", "@typescript-eslint"],
+	"rules": {
+		"react/react-in-jsx-scope": "off",
+		"linebreak-style": ["error", "windows"],
+		"no-tabs": 0,
+		"react/jsx-indent": [2, "tab"],
+		"@typescript-eslint/indent": [2, "tab"],
+		"react/jsx-indent-props": [2, "tab"],
+		"quotes": "off",
+		"@typescript-eslint/quotes": "off",
+		"@typescript-eslint/comma-dangle": "off",
+		"react/function-component-definition": [
+			2,
+			{
+				"namedComponents": "arrow-function"
+			}
+		],
+		"import/prefer-default-export": "off",
+		"implicit-arrow-linebreak": "off",
+		"arrow-body-style": "off",
+		"object-curly-newline": [
+			"error",
+			{
+				"ImportDeclaration": "never"
+			}
+		],
+		"operator-linebreak": "warn",
+		"react/jsx-wrap-multilines": "warn",
+		"react/no-array-index-key": "warn",
+		"no-param-reassign": [
+			"error",
+			{
+				"props": true,
+				"ignorePropertyModificationsFor": ["state"]
+			}
+		],
+		"react/jsx-one-expression-per-line": "off"
+	}
 }

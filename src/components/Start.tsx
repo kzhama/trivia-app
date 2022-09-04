@@ -26,9 +26,7 @@ const Start = () => {
 				Welcome to the Trivia Challenge!
 			</Title>
 			<Text weight={500} size="lg" align="center">
-				You will be presented with
-				{totalQuestionsCount || "..."}
-				True or False questions.
+				You will be presented with {totalQuestionsCount || "..."} True or False questions.
 			</Text>
 			<Text weight={500} size="lg" align="center">
 				Can you score 100%?
